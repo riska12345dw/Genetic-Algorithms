@@ -54,9 +54,18 @@ Dataset kanker payudara (breast cancer) untuk mengklasifikasikan pasien dengan k
   - Pada generasi kelima, akurasi kembali ke sekitar 98.60%, tidak ada peningkatan dibandingkan dengan generasi keempat.
 
 
+
 #### Hasil Plot Grafik
 
 ![alt text](https://github.com/AlmasDiqya22/Genetic-Algorithms/assets/148710085/43f8a5c3-1144-42b9-a6e5-7430bc0c0e9d)
 
 Hasil diatas merupakan grafik visualisasi dari skor akurasi yang diperoleh dari hasil optimasi algoritma genetika. 
 Jadi, hasil ini menunjukkan bahwa algoritma genetika mampu meningkatkan performa model pada beberapa generasi, mencapai akurasi tertinggi sekitar 99.30% pada generasi keempat. Namun, performa ini mungkin bervariasi di setiap percobaan, dan tergantung pada konfigurasi parameter serta kebetulan dalam evolusi populasi kromosom.
+
+#### Selection
+- Dalam program tersebut, jenis seleksi yang digunakan adalah *seleksi elitisme*. Seleksi elitisme memilih sejumlah kromosom terbaik (berdasarkan skor kecocokan) dari populasi saat ini dan meneruskannya ke generasi berikutnya tanpa melakukan perubahan. Dalam fungsi selection, kromosom terbaik (dengan skor kecocokan tertinggi) dipilih sebagai induk untuk generasi berikutnya, dan mereka langsung dimasukkan ke dalam population_nextgen tanpa modifikasi.
+#### Crossover
+- Dalam program tersebut, jenis crossover yang digunakan adalah crossover satu titik (single-point crossover). Crossover ini dilakukan pada satu titik tertentu di dalam kromosom, dan anak-anak baru dibentuk dengan menukar bagian kromosom antara dua induk. Lebih khusus, setengah bagian kiri dari satu induk digabungkan dengan setengah bagian kanan dari induk lainnya.
+#### Mutation
+- Dalam program tersebut, jenis mutasi yang digunakan adalah mutasi flip-bit (bit flipping mutation). Mutasi ini dilakukan dengan mengambil sejumlah posisi acak pada setiap kromosom dan mengubah nilai-nilai pada posisi tersebut. Dalam konteks ini, nilai-nilai pada posisi tersebut diubah dari True menjadi False atau sebaliknya.
+
